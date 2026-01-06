@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg-primary text-text-primary font-sans;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  /* Scrollbar personalizado */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-bg-secondary rounded;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border hover:bg-border-hover rounded;
+  }
+
+  /* Animaciones personalizadas */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Gradientes */
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-light;
+  }
+
+  .gradient-success {
+    @apply bg-gradient-to-r from-success to-success/80;
+  }
+
+  .gradient-danger {
+    @apply bg-gradient-to-r from-danger to-danger/80;
+  }
+
+  /* Efectos de hover */
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-200 hover:shadow-lg hover:shadow-primary/20;
+  }
+}
+
+@layer utilities {
+  /* Utilidades de texto */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Utilidades de layout */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Utilidades de animación */
+  .transition-base {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
+
+/* Estilos para modo oscuro */
+.dark {
+  color-scheme: dark;
+}
+
+/* Estilos para React Hot Toast */
+.toast-success {
+  @apply bg-success text-white;
+}
+
+.toast-error {
+  @apply bg-danger text-white;
+}
+
+.toast-info {
+  @apply bg-info text-white;
+}
+
+.toast-warning {
+  @apply bg-warning text-black;
+}

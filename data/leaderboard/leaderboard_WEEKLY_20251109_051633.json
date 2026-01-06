@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "collected_at": "2025-11-09T05:16:33.483232Z",
+    "period": "WEEKLY",
+    "type": "leaderboard",
+    "source": "binance_leaderboard_api"
+  },
+  "data": {
+    "code": "000000",
+    "message": null,
+    "messageDetail": null,
+    "data": [
+      {
+        "nickName": "TakeProfit14",
+        "encryptedUid": "4AFC867D2D9DF0D7B5AF29E6EEB53CD7",
+        "roi": 142.98,
+        "pnl": 32948.3,
+        "rank": 1,
+        "followerCount": 742,
+        "winRate": 62.4,
+        "avgLeverage": 4.4,
+        "positionShared": false,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "EMACrosser07",
+        "encryptedUid": "EE0FB15C9149DA58670D2EF75E9A5EC7",
+        "roi": 88.74,
+        "pnl": 17593.25,
+        "rank": 2,
+        "followerCount": 583,
+        "winRate": 64.9,
+        "avgLeverage": 3.8,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "VolumeTrader02",
+        "encryptedUid": "46233A0D29C7D30F1DEA7AB188A09F46",
+        "roi": 59.68,
+        "pnl": 10854.05,
+        "rank": 3,
+        "followerCount": 410,
+        "winRate": 69.9,
+        "avgLeverage": 1.9,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "Conservative101",
+        "encryptedUid": "52EFCA77955BAC77569898EFE6C8909E",
+        "roi": 55.14,
+        "pnl": 1939.99,
+        "rank": 4,
+        "followerCount": 377,
+        "winRate": 65.4,
+        "avgLeverage": 2.3,
+        "positionShared": false,
+        "twitterUrl": "https://twitter.com/conservative101"
+      },
+      {
+        "nickName": "HighLeverager04",
+        "encryptedUid": "6DCA17162205E0F20934612C028BA9A5",
+        "roi": 47.49,
+        "pnl": 14689.72,
+        "rank": 5,
+        "followerCount": 323,
+        "winRate": 62.7,
+        "avgLeverage": 1.6,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "MoonTrader12",
+        "encryptedUid": "B73C02CFDC7EF0C5BFC2134F2A1B6428",
+        "roi": 46.57,
+        "pnl": 20164.54,
+        "rank": 6,
+        "followerCount": 298,
+        "winRate": 54.9,
+        "avgLeverage": 3.6,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "RangeBound11",
+        "encryptedUid": "F3450D1104E95191691F5E5E2D7BB9F5",
+        "roi": 44.98,
+        "pnl": 13923.38,
+        "rank": 7,
+        "followerCount": 348,
+        "winRate": 62.8,
+        "avgLeverage": 2.0,
+        "positionShared": true,
+        "twitterUrl": "https://twitter.com/rangebound11"
+      },
+      {
+        "nickName": "SwingMaster03",
+        "encryptedUid": "50706D636EA265ADC866FAA335F01F33",
+        "roi": 41.34,
+        "pnl": 7274.63,
+        "rank": 8,
+        "followerCount": 293,
+        "winRate": 59.0,
+        "avgLeverage": 2.3,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "DayTrader15",
+        "encryptedUid": "3D44CF0590F2D86DE0F51EE95F86AF65",
+        "roi": 40.93,
+        "pnl": 13189.04,
+        "rank": 9,
+        "followerCount": 253,
+        "winRate": 55.8,
+        "avgLeverage": 1.7,
+        "positionShared": false,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "Conservative109",
+        "encryptedUid": "ED9D03F4239491489AE2ED411C602C09",
+        "roi": 38.4,
+        "pnl": 12117.76,
+        "rank": 10,
+        "followerCount": 233,
+        "winRate": 58.8,
+        "avgLeverage": 2.9,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "SupportResist13",
+        "encryptedUid": "A178A94CBF86F46BF9E71379DE01006D",
+        "roi": 36.42,
+        "pnl": 5330.16,
+        "rank": 11,
+        "followerCount": 217,
+        "winRate": 68.2,
+        "avgLeverage": 3.0,
+        "positionShared": true,
+        "twitterUrl": "https://twitter.com/supportresist13"
+      },
+      {
+        "nickName": "AlgoTrader06",
+        "encryptedUid": "932421767BDFFA1D332C82D9B131B898",
+        "roi": 25.22,
+        "pnl": 5472.63,
+        "rank": 12,
+        "followerCount": 177,
+        "winRate": 57.7,
+        "avgLeverage": 2.2,
+        "positionShared": false,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "DayTrader08",
+        "encryptedUid": "ED83F1E986B7D8F2F481D22B230BF576",
+        "roi": 22.63,
+        "pnl": 14216.35,
+        "rank": 13,
+        "followerCount": 198,
+        "winRate": 55.8,
+        "avgLeverage": 2.8,
+        "positionShared": false,
+        "twitterUrl": "https://twitter.com/daytrader08"
+      },
+      {
+        "nickName": "FibonacciMan10",
+        "encryptedUid": "85E97AF0C6D87BC00E49D747A174C56D",
+        "roi": 18.24,
+        "pnl": 2707.21,
+        "rank": 14,
+        "followerCount": 128,
+        "winRate": 67.4,
+        "avgLeverage": 1.8,
+        "positionShared": true,
+        "twitterUrl": "https://twitter.com/fibonacciman10"
+      },
+      {
+        "nickName": "EMACrosser05",
+        "encryptedUid": "BECC2E5939BEE9478DE917AA5BF376D2",
+        "roi": 15.61,
+        "pnl": 4898.45,
+        "rank": 15,
+        "followerCount": 202,
+        "winRate": 65.1,
+        "avgLeverage": 1.0,
+        "positionShared": false,
+        "twitterUrl": "https://twitter.com/emacrosser05"
+      }
+    ],
+    "success": true
+  }
+}

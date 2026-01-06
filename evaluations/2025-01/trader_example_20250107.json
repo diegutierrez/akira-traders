@@ -1,0 +1,32 @@
+{
+  "as_of_utc": "2025-01-07T00:00:00Z",
+  "risk_profile": "moderate",
+  "selection_criteria": {
+    "roi_90d_range_pct": [20, 60],
+    "max_drawdown_pct_lte": 20,
+    "win_rate_pct_gte": 55,
+    "min_days_active": 90,
+    "leverage_range": [1, 3],
+    "min_copiers": 100
+  },
+  "candidate": {
+    "display_name": "CryptoMaster123",
+    "binance_profile_url": "https://www.binance.com/es/copy-trading/lead-details?portfolioId=example123",
+    "metrics": {
+      "roi_30d_pct": 38.5,
+      "roi_90d_pct": 42.7,
+      "roi_180d_pct": 51.2,
+      "max_drawdown_pct": 14.5,
+      "win_rate_pct": 61.0,
+      "avg_leverage": 2.3,
+      "copiers": 342
+    },
+    "style": "swing",
+    "assets_whitelist": ["BTC", "ETH", "BNB", "SOL"],
+    "copy_mode_suggestion": "fixed",
+    "order_size_suggestion_usdt": 50,
+    "daily_loss_cap_pct": 3,
+    "stop_copy_drawdown_pct": 12,
+    "notes": "Trader con estrategia swing consistente. Opera principalmente BTC/ETH con buen control de riesgo. Historial de 120 días muestra consistencia en diferentes condiciones de mercado."
+  }
+}

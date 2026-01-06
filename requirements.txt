@@ -1,0 +1,33 @@
+# Akira Traders - Sistema de Evaluación de Copy Trading
+# Dependencias de Python
+
+# Validación de datos
+jsonschema>=4.20.0
+
+# Análisis de datos
+pandas>=2.1.4
+numpy>=1.26.0
+
+# Generación de reportes
+jinja2>=3.1.2
+markdown>=3.5.1
+
+# Conversión de documentos
+weasyprint>=60.1
+
+# Configuración
+pyyaml>=6.0.1
+
+# Utilidades
+python-dateutil>=2.8.2
+requests>=2.31.0
+
+# Desarrollo y testing (opcional)
+pytest>=7.4.3
+pytest-cov>=4.1.0
+black>=23.12.0
+flake8>=6.1.0
+mypy>=1.7.0
+
+# Pre-commit hooks
+pre-commit>=3.6.0

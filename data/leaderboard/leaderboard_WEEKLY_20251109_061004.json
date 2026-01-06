@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "collected_at": "2025-11-09T06:10:04.502265Z",
+    "period": "WEEKLY",
+    "type": "leaderboard",
+    "source": "binance_leaderboard_api"
+  },
+  "data": {
+    "code": "000000",
+    "message": null,
+    "messageDetail": null,
+    "data": [
+      {
+        "nickName": "PositionTrader10",
+        "encryptedUid": "1C6AA2834D0C7FEF04841519BA12B3DC",
+        "roi": 125.21,
+        "pnl": 24253.88,
+        "rank": 1,
+        "followerCount": 700,
+        "winRate": 63.5,
+        "avgLeverage": 4.1,
+        "positionShared": false,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "OrderFlowPro02",
+        "encryptedUid": "8A6780CF495AB0D3CFC53D4BF52464BF",
+        "roi": 50.79,
+        "pnl": 27614.58,
+        "rank": 2,
+        "followerCount": 290,
+        "winRate": 57.6,
+        "avgLeverage": 4.2,
+        "positionShared": true,
+        "twitterUrl": "https://twitter.com/orderflowpro02"
+      },
+      {
+        "nickName": "StochRSI04",
+        "encryptedUid": "04D3625EB2861C19C08CCF7CC28474AC",
+        "roi": 37.34,
+        "pnl": 9219.89,
+        "rank": 3,
+        "followerCount": 234,
+        "winRate": 63.0,
+        "avgLeverage": 2.3,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "RiskTaker07",
+        "encryptedUid": "504F7180C87E6624453643546B4C480C",
+        "roi": 29.53,
+        "pnl": 8094.05,
+        "rank": 4,
+        "followerCount": 249,
+        "winRate": 59.2,
+        "avgLeverage": 2.1,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "TrendFollower01",
+        "encryptedUid": "5B51232D151AA52319083C3585BAE8F6",
+        "roi": 28.67,
+        "pnl": 2280.8,
+        "rank": 5,
+        "followerCount": 221,
+        "winRate": 55.0,
+        "avgLeverage": 2.2,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "BollingerKing03",
+        "encryptedUid": "088ADC2A77E5050C55B1F4BD27369D8E",
+        "roi": 25.95,
+        "pnl": 1584.66,
+        "rank": 6,
+        "followerCount": 213,
+        "winRate": 62.9,
+        "avgLeverage": 1.9,
+        "positionShared": false,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "MoonTrader05",
+        "encryptedUid": "9560AB4531A2B08F3A38EAC8B3071688",
+        "roi": 24.3,
+        "pnl": 10887.14,
+        "rank": 7,
+        "followerCount": 176,
+        "winRate": 56.9,
+        "avgLeverage": 1.5,
+        "positionShared": false,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "IntraDay06",
+        "encryptedUid": "29BF97DB7BBEA1BF82720CE97897860F",
+        "roi": 21.19,
+        "pnl": 1882.72,
+        "rank": 8,
+        "followerCount": 141,
+        "winRate": 64.9,
+        "avgLeverage": 2.4,
+        "positionShared": false,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "SupportResist09",
+        "encryptedUid": "24C5A1F8FB06623CC0BA8C6F889E753F",
+        "roi": 16.66,
+        "pnl": 3556.58,
+        "rank": 9,
+        "followerCount": 224,
+        "winRate": 70.0,
+        "avgLeverage": 1.9,
+        "positionShared": true,
+        "twitterUrl": null
+      },
+      {
+        "nickName": "MoonTrader08",
+        "encryptedUid": "166D8358E0400CBAA6FE5A4F35AD293C",
+        "roi": 13.72,
+        "pnl": 3053.94,
+        "rank": 10,
+        "followerCount": 145,
+        "winRate": 60.7,
+        "avgLeverage": 1.8,
+        "positionShared": false,
+        "twitterUrl": "https://twitter.com/moontrader08"
+      }
+    ],
+    "success": true
+  }
+}

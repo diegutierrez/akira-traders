@@ -1,0 +1,411 @@
+{
+  "metadata": {
+    "analyzed_at": "2025-11-09T06:58:58.900481Z",
+    "profile": "moderate",
+    "source_snapshot": {
+      "collected_at": "2025-11-09T06:58:50.644105Z",
+      "period": "WEEKLY",
+      "type": "leaderboard",
+      "source": "binance_leaderboard_api"
+    },
+    "analyzer_version": "1.0.0"
+  },
+  "stats": {
+    "traders_analyzed": 20,
+    "traders_passed_filters": 14,
+    "traders_failed_filters": 6,
+    "avg_score": 53.81,
+    "max_score": 69.66,
+    "min_score": 39.73
+  },
+  "candidates": [
+    {
+      "nickName": "MomentumMan06",
+      "encryptedUid": "A5935666AD85BA38F39DCE2668A76A3A",
+      "roi": 58.77,
+      "pnl": 10869.1,
+      "rank": 7,
+      "followerCount": 397,
+      "winRate": 61.4,
+      "avgLeverage": 2.1,
+      "positionShared": true,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 5.25,
+        "rar": 11.19,
+        "consistency": 0.61,
+        "recovery_factor": 11.19,
+        "profit_factor": 1.59
+      },
+      "scores": {
+        "dd_score": 73.75,
+        "wr_score": 14.22,
+        "roi_score": 96.93,
+        "cons_score": 61.0,
+        "rar_score": 100,
+        "total_score": 69.66
+      },
+      "recommendation": "HOLD - Considerar para diversificación"
+    },
+    {
+      "nickName": "Overnight01",
+      "encryptedUid": "B4C2B72B88C863D52A1963AB5AADF2AB",
+      "roi": 57.55,
+      "pnl": 4627.1,
+      "rank": 8,
+      "followerCount": 407,
+      "winRate": 60.6,
+      "avgLeverage": 1.9,
+      "positionShared": false,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 4.75,
+        "rar": 12.12,
+        "consistency": 0.61,
+        "recovery_factor": 12.12,
+        "profit_factor": 1.54
+      },
+      "scores": {
+        "dd_score": 76.25,
+        "wr_score": 12.44,
+        "roi_score": 93.88,
+        "cons_score": 61.0,
+        "rar_score": 100,
+        "total_score": 69.17
+      },
+      "recommendation": "HOLD - Considerar para diversificación"
+    },
+    {
+      "nickName": "ChartWizard16",
+      "encryptedUid": "5F0727721DFB8EAAF70B42B9C35C8339",
+      "roi": 28.88,
+      "pnl": 3639.57,
+      "rank": 16,
+      "followerCount": 289,
+      "winRate": 74.0,
+      "avgLeverage": 1.2,
+      "positionShared": true,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 3.0,
+        "rar": 9.63,
+        "consistency": 0.74,
+        "recovery_factor": 9.63,
+        "profit_factor": 2.85
+      },
+      "scores": {
+        "dd_score": 85.0,
+        "wr_score": 42.22,
+        "roi_score": 22.2,
+        "cons_score": 74.0,
+        "rar_score": 96.3,
+        "total_score": 60.79
+      },
+      "recommendation": "HOLD - Considerar para diversificación"
+    },
+    {
+      "nickName": "TrendRider05",
+      "encryptedUid": "692E9EEF9366DFE0985E412939594026",
+      "roi": 40.22,
+      "pnl": 14326.59,
+      "rank": 13,
+      "followerCount": 307,
+      "winRate": 60.2,
+      "avgLeverage": 1.5,
+      "positionShared": true,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 3.75,
+        "rar": 10.73,
+        "consistency": 0.6,
+        "recovery_factor": 10.73,
+        "profit_factor": 1.51
+      },
+      "scores": {
+        "dd_score": 81.25,
+        "wr_score": 11.56,
+        "roi_score": 50.55,
+        "cons_score": 60.0,
+        "rar_score": 100,
+        "total_score": 59.26
+      },
+      "recommendation": "WATCH - Monitorear evolución"
+    },
+    {
+      "nickName": "StochRSI08",
+      "encryptedUid": "CFF4FD0563C92ACF2C5DBA54B1CC113B",
+      "roi": 48.73,
+      "pnl": 12455.37,
+      "rank": 11,
+      "followerCount": 301,
+      "winRate": 59.6,
+      "avgLeverage": 2.4,
+      "positionShared": true,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 6.0,
+        "rar": 8.12,
+        "consistency": 0.6,
+        "recovery_factor": 8.12,
+        "profit_factor": 1.48
+      },
+      "scores": {
+        "dd_score": 70.0,
+        "wr_score": 10.22,
+        "roi_score": 71.82,
+        "cons_score": 60.0,
+        "rar_score": 81.2,
+        "total_score": 58.68
+      },
+      "recommendation": "WATCH - Monitorear evolución"
+    },
+    {
+      "nickName": "LongTermBull09",
+      "encryptedUid": "CD3703FBA7A23CB9FA7B1145AA6B1C85",
+      "roi": 50.19,
+      "pnl": 14036.35,
+      "rank": 9,
+      "followerCount": 338,
+      "winRate": 58.4,
+      "avgLeverage": 2.5,
+      "positionShared": true,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 6.25,
+        "rar": 8.03,
+        "consistency": 0.58,
+        "recovery_factor": 8.03,
+        "profit_factor": 1.4
+      },
+      "scores": {
+        "dd_score": 68.75,
+        "wr_score": 7.56,
+        "roi_score": 75.47,
+        "cons_score": 58.0,
+        "rar_score": 80.3,
+        "total_score": 58.31
+      },
+      "recommendation": "WATCH - Monitorear evolución"
+    },
+    {
+      "nickName": "IntraDay13",
+      "encryptedUid": "8644E24FBACC1D8561C7B6A8F08B3111",
+      "roi": 48.75,
+      "pnl": 5041.06,
+      "rank": 10,
+      "followerCount": 368,
+      "winRate": 61.6,
+      "avgLeverage": 2.7,
+      "positionShared": false,
+      "twitterUrl": "https://twitter.com/intraday13",
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 6.75,
+        "rar": 7.22,
+        "consistency": 0.62,
+        "recovery_factor": 7.22,
+        "profit_factor": 1.6
+      },
+      "scores": {
+        "dd_score": 66.25,
+        "wr_score": 14.67,
+        "roi_score": 71.88,
+        "cons_score": 62.0,
+        "rar_score": 72.2,
+        "total_score": 57.59
+      },
+      "recommendation": "WATCH - Monitorear evolución"
+    },
+    {
+      "nickName": "Overnight19",
+      "encryptedUid": "CB6CCA0BBF704870B74C5E39AE24F382",
+      "roi": 32.84,
+      "pnl": 14958.24,
+      "rank": 14,
+      "followerCount": 184,
+      "winRate": 66.2,
+      "avgLeverage": 1.7,
+      "positionShared": false,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 4.25,
+        "rar": 7.73,
+        "consistency": 0.66,
+        "recovery_factor": 7.73,
+        "profit_factor": 1.96
+      },
+      "scores": {
+        "dd_score": 78.75,
+        "wr_score": 24.89,
+        "roi_score": 32.1,
+        "cons_score": 66.0,
+        "rar_score": 77.3,
+        "total_score": 54.19
+      },
+      "recommendation": "WATCH - Monitorear evolución"
+    },
+    {
+      "nickName": "Overnight15",
+      "encryptedUid": "5198E5CDF3B5DB44A821F85F32407ACC",
+      "roi": 43.03,
+      "pnl": 2977.0,
+      "rank": 12,
+      "followerCount": 245,
+      "winRate": 58.7,
+      "avgLeverage": 2.5,
+      "positionShared": true,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 6.25,
+        "rar": 6.88,
+        "consistency": 0.59,
+        "recovery_factor": 6.88,
+        "profit_factor": 1.42
+      },
+      "scores": {
+        "dd_score": 68.75,
+        "wr_score": 8.22,
+        "roi_score": 57.57,
+        "cons_score": 59.0,
+        "rar_score": 68.8,
+        "total_score": 52.4
+      },
+      "recommendation": "WATCH - Monitorear evolución"
+    },
+    {
+      "nickName": "ETHKing10",
+      "encryptedUid": "C25509E5718D47D06018370055176A54",
+      "roi": 30.86,
+      "pnl": 10822.12,
+      "rank": 15,
+      "followerCount": 183,
+      "winRate": 66.8,
+      "avgLeverage": 2.2,
+      "positionShared": true,
+      "twitterUrl": null,
+      "profile": "moderate",
+      "derived_metrics": {
+        "estimated_max_dd": 5.5,
+        "rar": 5.61,
+        "consistency": 0.67,
+        "recovery_factor": 5.61,
+        "profit_factor": 2.01
+      },
+      "scores": {
+        "dd_score": 72.5,
+        "wr_score": 26.22,
+        "roi_score": 27.15,
+        "cons_score": 67.0,
+        "rar_score": 56.1,
+        "total_score": 48.62
+      },
+      "recommendation": "PASS - No cumple criterios"
+    }
+  ],
+  "rejected": [
+    {
+      "nickName": "LiquiditySeeker02",
+      "encryptedUid": "43E5B26561FD47952652E1B8BD5A72F0",
+      "roi": 147.86,
+      "pnl": 33785.21,
+      "rank": 1,
+      "followerCount": 809,
+      "winRate": 53.1,
+      "avgLeverage": 3.4,
+      "positionShared": true,
+      "twitterUrl": null,
+      "rejection_reasons": [
+        "ROI too high (147.86% > 60.0%)",
+        "Win rate too low (53.1% < 55.0%)",
+        "Leverage too high (3.4x > 3.0x)"
+      ]
+    },
+    {
+      "nickName": "IntraDay17",
+      "encryptedUid": "92DA5258FB9773D5026DF959F5024054",
+      "roi": 127.86,
+      "pnl": 32030.27,
+      "rank": 2,
+      "followerCount": 661,
+      "winRate": 59.7,
+      "avgLeverage": 4.5,
+      "positionShared": true,
+      "twitterUrl": null,
+      "rejection_reasons": [
+        "ROI too high (127.86% > 60.0%)",
+        "Leverage too high (4.5x > 3.0x)"
+      ]
+    },
+    {
+      "nickName": "LongTermBull03",
+      "encryptedUid": "5883F353C8DF90C9C2037A8EE9758FEF",
+      "roi": 107.92,
+      "pnl": 39897.63,
+      "rank": 3,
+      "followerCount": 568,
+      "winRate": 57.8,
+      "avgLeverage": 4.3,
+      "positionShared": false,
+      "twitterUrl": null,
+      "rejection_reasons": [
+        "ROI too high (107.92% > 60.0%)",
+        "Leverage too high (4.3x > 3.0x)"
+      ]
+    },
+    {
+      "nickName": "RangeBound07",
+      "encryptedUid": "B59A5FF9875CC46101C24D171E1DF5FD",
+      "roi": 100.16,
+      "pnl": 2994.43,
+      "rank": 4,
+      "followerCount": 629,
+      "winRate": 63.2,
+      "avgLeverage": 4.7,
+      "positionShared": true,
+      "twitterUrl": null,
+      "rejection_reasons": [
+        "ROI too high (100.16% > 60.0%)",
+        "Leverage too high (4.7x > 3.0x)"
+      ]
+    },
+    {
+      "nickName": "LiquiditySeeker20",
+      "encryptedUid": "E956BA783F53ED5B595B0188FCEB4815",
+      "roi": 94.81,
+      "pnl": 23582.55,
+      "rank": 5,
+      "followerCount": 525,
+      "winRate": 63.7,
+      "avgLeverage": 3.0,
+      "positionShared": false,
+      "twitterUrl": null,
+      "rejection_reasons": [
+        "ROI too high (94.81% > 60.0%)"
+      ]
+    },
+    {
+      "nickName": "VolumeTrader12",
+      "encryptedUid": "964FD3150ED25815C9F261AAC48CC786",
+      "roi": 66.48,
+      "pnl": 40171.22,
+      "rank": 6,
+      "followerCount": 366,
+      "winRate": 61.9,
+      "avgLeverage": 4.3,
+      "positionShared": false,
+      "twitterUrl": null,
+      "rejection_reasons": [
+        "ROI too high (66.48% > 60.0%)",
+        "Leverage too high (4.3x > 3.0x)"
+      ]
+    }
+  ]
+}
