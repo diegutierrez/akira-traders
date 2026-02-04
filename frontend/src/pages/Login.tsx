@@ -18,7 +18,7 @@ export function Login() {
 
   const handleLogin = async () => {
     try {
-      login();
+      await login();
     } catch (error) {
       toast.error('Error al iniciar sesión');
     }
@@ -52,7 +52,7 @@ export function Login() {
           </h2>
 
           <p className="text-text-tertiary text-sm text-center mb-6">
-            Acceso restringido. Solo usuarios autorizados.
+            Acceso con tu cuenta de Google
           </p>
 
           <button

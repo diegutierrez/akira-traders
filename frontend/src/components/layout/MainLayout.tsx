@@ -12,6 +12,10 @@ export function MainLayout() {
   const { user, logout } = useAuth()
   const location = useLocation()
 
+  const userEmail = user?.email
+  const userName = user?.user_metadata?.full_name || user?.user_metadata?.name
+  const userPicture = user?.user_metadata?.avatar_url || user?.user_metadata?.picture
+
   return (
     <div className="min-h-screen bg-bg-primary">
       {/* Header */}
@@ -49,19 +53,19 @@ export function MainLayout() {
               {user && (
                 <>
                   <div className="hidden sm:flex items-center gap-2">
-                    {user.picture && (
+                    {userPicture && (
                       <img
-                        src={user.picture}
-                        alt={user.name}
+                        src={userPicture}
+                        alt={userName || userEmail || ''}
                         className="w-8 h-8 rounded-full"
                       />
                     )}
                     <span className="text-sm text-text-secondary">
-                      {user.name || user.email}
+                      {userName || userEmail}
                     </span>
                   </div>
                   <button
-                    onClick={logout}
+                    onClick={() => logout()}
                     className="px-3 py-1.5 text-sm text-text-secondary hover:text-danger transition-colors"
                   >
                     Salir
