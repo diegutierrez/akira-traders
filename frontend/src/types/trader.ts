@@ -98,10 +98,13 @@ export interface ConsolidatedReport {
     copiers: StatsSummary;
   };
   traders_ranking: TraderAnalysis[];
-  by_risk_profile: Record<RiskProfile, {
-    count: number;
-    statistics: any;
-  }>;
+  by_risk_profile: Record<
+    RiskProfile,
+    {
+      count: number;
+      statistics: Record<string, StatsSummary>;
+    }
+  >;
 }
 
 export interface StatsSummary {

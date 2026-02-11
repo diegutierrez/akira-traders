@@ -34,20 +34,20 @@ export function formatUSDT(value: number | null | undefined, decimals: number = 
  */
 export function formatDate(date: string | Date, includeTime: boolean = false): string {
   const d = typeof date === 'string' ? new Date(date) : date;
-  
+
   if (isNaN(d.getTime())) return 'Fecha inválida';
-  
+
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   };
-  
+
   if (includeTime) {
     options.hour = '2-digit';
     options.minute = '2-digit';
   }
-  
+
   return new Intl.DateTimeFormat('es-ES', options).format(d);
 }
 
@@ -59,7 +59,7 @@ export function formatRelativeDate(date: string | Date): string {
   const now = new Date();
   const diffMs = now.getTime() - d.getTime();
   const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-  
+
   if (diffDays === 0) return 'Hoy';
   if (diffDays === 1) return 'Ayer';
   if (diffDays < 7) return `Hace ${diffDays} días`;
@@ -132,7 +132,7 @@ export function truncateText(text: string, maxLength: number = 50): string {
 export function capitalize(text: string): string {
   return text
     .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
 }
 

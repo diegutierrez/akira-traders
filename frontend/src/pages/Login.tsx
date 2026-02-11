@@ -37,12 +37,8 @@ export function Login() {
       <div className="max-w-md w-full space-y-8">
         {/* Logo / Título */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-primary mb-2">
-            Akira Traders
-          </h1>
-          <p className="text-text-secondary">
-            Framework de evaluación de traders
-          </p>
+          <h1 className="text-4xl font-bold text-primary mb-2">Akira Traders</h1>
+          <p className="text-text-secondary">Framework de evaluación de traders</p>
         </div>
 
         {/* Card de Login */}

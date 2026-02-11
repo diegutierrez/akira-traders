@@ -4,7 +4,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { z } from 'zod';
-import { RISK_PROFILE_DEFAULTS, RISK_PROFILE_LABELS, TRADING_STYLE_LABELS, COPY_MODE_LABELS } from '../constants/riskProfiles';
+import {
+  RISK_PROFILE_DEFAULTS,
+  RISK_PROFILE_LABELS,
+  TRADING_STYLE_LABELS,
+  COPY_MODE_LABELS,
+} from '../constants/riskProfiles';
 import { FormInput, FormSelect, FormSection, FormTextarea } from '../components/forms';
 import { createEvaluation, type RiskProfile } from '../services/evaluations';
 
@@ -159,18 +164,14 @@ export function NewEvaluation() {
   };
 
   const toggleAsset = (asset: string) => {
-    setSelectedAssets(prev =>
-      prev.includes(asset)
-        ? prev.filter(a => a !== asset)
-        : [...prev, asset]
+    setSelectedAssets((prev) =>
+      prev.includes(asset) ? prev.filter((a) => a !== asset) : [...prev, asset],
     );
   };
 
   return (
     <div className="py-8 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-text-primary mb-8">
-        Nueva Evaluación
-      </h1>
+      <h1 className="text-3xl font-bold text-text-primary mb-8">Nueva Evaluación</h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
         {/* Información del Trader */}
@@ -356,7 +357,10 @@ export function NewEvaluation() {
         </FormSection>
 
         {/* Configuración de Copia */}
-        <FormSection title="Configuración de Copia" description="Parámetros recomendados para copiar">
+        <FormSection
+          title="Configuración de Copia"
+          description="Parámetros recomendados para copiar"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <FormSelect
               label="Modo de Copia"
@@ -397,9 +401,12 @@ export function NewEvaluation() {
         </FormSection>
 
         {/* Assets */}
-        <FormSection title="Activos Permitidos" description="Opcional - Activos que opera el trader">
+        <FormSection
+          title="Activos Permitidos"
+          description="Opcional - Activos que opera el trader"
+        >
           <div className="flex flex-wrap gap-2">
-            {COMMON_ASSETS.map(asset => (
+            {COMMON_ASSETS.map((asset) => (
               <button
                 key={asset}
                 type="button"
@@ -415,9 +422,7 @@ export function NewEvaluation() {
             ))}
           </div>
           {selectedAssets.length > 0 && (
-            <p className="text-sm text-text-tertiary">
-              Seleccionados: {selectedAssets.join(', ')}
-            </p>
+            <p className="text-sm text-text-tertiary">Seleccionados: {selectedAssets.join(', ')}</p>
           )}
         </FormSection>
 

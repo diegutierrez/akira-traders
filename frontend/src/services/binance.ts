@@ -31,7 +31,7 @@ export type PeriodType = 'SEVEN_DAYS' | 'THIRTY_DAYS' | 'NINETY_DAYS';
  */
 export async function fetchBinanceTraders(
   period: PeriodType = 'THIRTY_DAYS',
-  limit: number = 20
+  limit: number = 20,
 ): Promise<BinanceTrader[]> {
   const response = await fetch(`${EDGE_FUNCTION_URL}?period=${period}&limit=${limit}`);
 
@@ -56,7 +56,7 @@ export async function fetchBinanceTraders(
  */
 export async function syncBinanceTraders(
   period: PeriodType = 'THIRTY_DAYS',
-  limit: number = 20
+  limit: number = 20,
 ): Promise<{ created: number; updated: number; traders: BinanceTrader[] }> {
   // Obtener traders de Binance
   const binanceTraders = await fetchBinanceTraders(period, limit);
@@ -88,17 +88,15 @@ export async function syncBinanceTraders(
       updated++;
     } else {
       // Crear nuevo con métricas
-      await supabase
-        .from('traders')
-        .insert({
-          display_name: trader.display_name,
-          binance_uid: trader.binance_uid,
-          binance_profile_url: trader.binance_profile_url,
-          latest_metrics: trader.metrics,
-          metrics_updated_at: now,
-          trading_style: 'mixed',
-          is_active: true,
-        });
+      await supabase.from('traders').insert({
+        display_name: trader.display_name,
+        binance_uid: trader.binance_uid,
+        binance_profile_url: trader.binance_profile_url,
+        latest_metrics: trader.metrics,
+        metrics_updated_at: now,
+        trading_style: 'mixed',
+        is_active: true,
+      });
       created++;
     }
   }
@@ -137,7 +135,9 @@ export async function fetchTraderByUrl(binanceUrl: string): Promise<BinanceTrade
 /**
  * Agrega un trader por URL de Binance y lo guarda en Supabase
  */
-export async function addTraderByUrl(binanceUrl: string): Promise<{ trader: BinanceTrader; isNew: boolean }> {
+export async function addTraderByUrl(
+  binanceUrl: string,
+): Promise<{ trader: BinanceTrader; isNew: boolean }> {
   // Obtener datos del trader
   const traderData = await fetchTraderByUrl(binanceUrl);
 
@@ -170,17 +170,15 @@ export async function addTraderByUrl(binanceUrl: string): Promise<{ trader: Bina
     return { trader: traderData, isNew: false };
   } else {
     // Crear nuevo
-    await supabase
-      .from('traders')
-      .insert({
-        display_name: traderData.display_name,
-        binance_uid: traderData.binance_uid,
-        binance_profile_url: traderData.binance_profile_url,
-        latest_metrics: traderData.metrics,
-        metrics_updated_at: now,
-        trading_style: 'mixed',
-        is_active: true,
-      });
+    await supabase.from('traders').insert({
+      display_name: traderData.display_name,
+      binance_uid: traderData.binance_uid,
+      binance_profile_url: traderData.binance_profile_url,
+      latest_metrics: traderData.metrics,
+      metrics_updated_at: now,
+      trading_style: 'mixed',
+      is_active: true,
+    });
 
     return { trader: traderData, isNew: true };
   }

@@ -24,11 +24,11 @@ export interface HyperliquidTraderMetrics {
 }
 
 export interface TraderValidationMetrics {
-  accountAge: number;      // días desde primer trade
+  accountAge: number; // días desde primer trade
   totalTrades: number;
   winRate: number;
   avgTradeSize: number;
-  largestWinPct: number;   // % del PnL del mayor trade
+  largestWinPct: number; // % del PnL del mayor trade
   diversification: number; // coins distintos
 }
 
@@ -61,9 +61,9 @@ export interface HyperliquidTrader {
 
 export interface FetchOptions {
   limit?: number;
-  validate?: boolean;   // Obtener métricas de validación (más lento)
-  minPnl?: number;      // PnL mínimo en USD
-  minRoi?: number;      // ROI mínimo (ej: 0.1 = 10%)
+  validate?: boolean; // Obtener métricas de validación (más lento)
+  minPnl?: number; // PnL mínimo en USD
+  minRoi?: number; // ROI mínimo (ej: 0.1 = 10%)
   onlyReliable?: boolean; // Solo traders que pasan validación
 }
 
@@ -71,15 +71,9 @@ export interface FetchOptions {
  * Obtiene traders del leaderboard de Hyperliquid
  */
 export async function fetchHyperliquidTraders(
-  options: FetchOptions = {}
+  options: FetchOptions = {},
 ): Promise<HyperliquidTrader[]> {
-  const {
-    limit = 20,
-    validate = false,
-    minPnl = 0,
-    minRoi = 0,
-    onlyReliable = false,
-  } = options;
+  const { limit = 20, validate = false, minPnl = 0, minRoi = 0, onlyReliable = false } = options;
 
   const params = new URLSearchParams({
     limit: limit.toString(),
@@ -99,7 +93,7 @@ export async function fetchHyperliquidTraders(
 
   // Filtrar solo confiables si se solicita
   if (onlyReliable && validate) {
-    traders = traders.filter(t => t.is_reliable);
+    traders = traders.filter((t) => t.is_reliable);
   }
 
   return traders;
@@ -111,7 +105,7 @@ export async function fetchHyperliquidTraders(
  */
 export async function fetchValidatedTraders(
   limit: number = 20,
-  onlyReliable: boolean = true
+  onlyReliable: boolean = true,
 ): Promise<HyperliquidTrader[]> {
   return fetchHyperliquidTraders({
     limit,
@@ -124,7 +118,7 @@ export async function fetchValidatedTraders(
  * Sincroniza traders de Hyperliquid con Supabase
  */
 export async function syncHyperliquidTraders(
-  options: FetchOptions = { limit: 20, validate: true }
+  options: FetchOptions = { limit: 20, validate: true },
 ): Promise<{ created: number; updated: number; traders: HyperliquidTrader[] }> {
   const hlTraders = await fetchHyperliquidTraders(options);
 
@@ -150,9 +144,10 @@ export async function syncHyperliquidTraders(
       copiers: trader.metrics.copiers,
       days_active: trader.validation?.metrics.accountAge || 0,
       pnl: trader.metrics.pnl,
-      aum: typeof trader.metrics.aum === 'string'
-        ? parseFloat(trader.metrics.aum)
-        : trader.metrics.aum,
+      aum:
+        typeof trader.metrics.aum === 'string'
+          ? parseFloat(trader.metrics.aum)
+          : trader.metrics.aum,
       volume: trader.metrics.volume,
       platform: 'hyperliquid',
       // Datos de validación adicionales
@@ -178,17 +173,15 @@ export async function syncHyperliquidTraders(
         .eq('binance_uid', trader.platform_uid);
       updated++;
     } else {
-      await supabase
-        .from('traders')
-        .insert({
-          display_name: trader.display_name,
-          binance_uid: trader.platform_uid,
-          binance_profile_url: trader.profile_url,
-          latest_metrics: metricsToSave,
-          metrics_updated_at: now,
-          trading_style: 'mixed',
-          is_active: true,
-        });
+      await supabase.from('traders').insert({
+        display_name: trader.display_name,
+        binance_uid: trader.platform_uid,
+        binance_profile_url: trader.profile_url,
+        latest_metrics: metricsToSave,
+        metrics_updated_at: now,
+        trading_style: 'mixed',
+        is_active: true,
+      });
       created++;
     }
   }
@@ -205,5 +198,5 @@ export async function getTraderDetails(address: string): Promise<HyperliquidTrad
     validate: true,
   });
 
-  return traders.find(t => t.platform_uid.toLowerCase() === address.toLowerCase()) || null;
+  return traders.find((t) => t.platform_uid.toLowerCase() === address.toLowerCase()) || null;
 }

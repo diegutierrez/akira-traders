@@ -22,19 +22,15 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             'focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent',
             'placeholder:text-text-tertiary',
             error ? 'border-danger' : 'border-border hover:border-border-hover',
-            className
+            className,
           )}
           {...props}
         />
-        {hint && !error && (
-          <p className="text-xs text-text-tertiary">{hint}</p>
-        )}
-        {error && (
-          <p className="text-xs text-danger">{error}</p>
-        )}
+        {hint && !error && <p className="text-xs text-text-tertiary">{hint}</p>}
+        {error && <p className="text-xs text-danger">{error}</p>}
       </div>
     );
-  }
+  },
 );
 
 FormInput.displayName = 'FormInput';

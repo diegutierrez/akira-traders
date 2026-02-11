@@ -1,20 +1,20 @@
-import { Outlet, Link, useLocation } from 'react-router-dom'
-import { useAuth } from '../../contexts/AuthContext'
+import { Outlet, Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard' },
   { name: 'Traders', href: '/traders' },
   { name: 'Nueva Evaluación', href: '/evaluations/new' },
   { name: 'Analytics', href: '/analytics' },
-]
+];
 
 export function MainLayout() {
-  const { user, logout } = useAuth()
-  const location = useLocation()
+  const { user, logout } = useAuth();
+  const location = useLocation();
 
-  const userEmail = user?.email
-  const userName = user?.user_metadata?.full_name || user?.user_metadata?.name
-  const userPicture = user?.user_metadata?.avatar_url || user?.user_metadata?.picture
+  const userEmail = user?.email;
+  const userName = user?.user_metadata?.full_name || user?.user_metadata?.name;
+  const userPicture = user?.user_metadata?.avatar_url || user?.user_metadata?.picture;
 
   return (
     <div className="min-h-screen bg-bg-primary">
@@ -31,7 +31,7 @@ export function MainLayout() {
             {/* Navigation */}
             <nav className="hidden md:flex items-center gap-1">
               {navigation.map((item) => {
-                const isActive = location.pathname === item.href
+                const isActive = location.pathname === item.href;
                 return (
                   <Link
                     key={item.name}
@@ -44,7 +44,7 @@ export function MainLayout() {
                   >
                     {item.name}
                   </Link>
-                )
+                );
               })}
             </nav>
 
@@ -60,9 +60,7 @@ export function MainLayout() {
                         className="w-8 h-8 rounded-full"
                       />
                     )}
-                    <span className="text-sm text-text-secondary">
-                      {userName || userEmail}
-                    </span>
+                    <span className="text-sm text-text-secondary">{userName || userEmail}</span>
                   </div>
                   <button
                     onClick={() => logout()}
@@ -79,7 +77,7 @@ export function MainLayout() {
         {/* Mobile Navigation */}
         <nav className="md:hidden border-t border-border px-4 py-2 flex gap-1 overflow-x-auto">
           {navigation.map((item) => {
-            const isActive = location.pathname === item.href
+            const isActive = location.pathname === item.href;
             return (
               <Link
                 key={item.name}
@@ -92,7 +90,7 @@ export function MainLayout() {
               >
                 {item.name}
               </Link>
-            )
+            );
           })}
         </nav>
       </header>
@@ -102,5 +100,5 @@ export function MainLayout() {
         <Outlet />
       </main>
     </div>
-  )
+  );
 }

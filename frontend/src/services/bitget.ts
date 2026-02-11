@@ -27,9 +27,7 @@ export interface BitgetTrader {
 /**
  * Obtiene traders del leaderboard de Bitget
  */
-export async function fetchBitgetTraders(
-  limit: number = 20
-): Promise<BitgetTrader[]> {
+export async function fetchBitgetTraders(limit: number = 20): Promise<BitgetTrader[]> {
   const response = await fetch(`${EDGE_FUNCTION_URL}?limit=${limit}`);
 
   const data = await response.json();
@@ -45,7 +43,7 @@ export async function fetchBitgetTraders(
  * Sincroniza traders de Bitget con Supabase
  */
 export async function syncBitgetTraders(
-  limit: number = 20
+  limit: number = 20,
 ): Promise<{ created: number; updated: number; traders: BitgetTrader[] }> {
   const bitgetTraders = await fetchBitgetTraders(limit);
 
@@ -88,17 +86,15 @@ export async function syncBitgetTraders(
         .eq('binance_uid', trader.bitget_uid);
       updated++;
     } else {
-      await supabase
-        .from('traders')
-        .insert({
-          display_name: trader.display_name,
-          binance_uid: trader.bitget_uid, // Reutilizamos el campo
-          binance_profile_url: trader.profile_url,
-          latest_metrics: metricsToSave,
-          metrics_updated_at: now,
-          trading_style: 'mixed',
-          is_active: true,
-        });
+      await supabase.from('traders').insert({
+        display_name: trader.display_name,
+        binance_uid: trader.bitget_uid, // Reutilizamos el campo
+        binance_profile_url: trader.profile_url,
+        latest_metrics: metricsToSave,
+        metrics_updated_at: now,
+        trading_style: 'mixed',
+        is_active: true,
+      });
       created++;
     }
   }

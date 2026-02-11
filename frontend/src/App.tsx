@@ -1,12 +1,12 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
-import { MainLayout } from './components/layout/MainLayout'
-import { Dashboard } from './pages/Dashboard'
-import { Traders } from './pages/Traders'
-import { TraderDetail } from './pages/TraderDetail'
-import { NewEvaluation } from './pages/NewEvaluation'
-import { Analytics } from './pages/Analytics'
-import { Login } from './pages/Login'
-import { ProtectedRoute } from './components/auth/ProtectedRoute'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { MainLayout } from './components/layout/MainLayout';
+import { Dashboard } from './pages/Dashboard';
+import { Traders } from './pages/Traders';
+import { TraderDetail } from './pages/TraderDetail';
+import { NewEvaluation } from './pages/NewEvaluation';
+import { Analytics } from './pages/Analytics';
+import { Login } from './pages/Login';
+import { ProtectedRoute } from './components/auth/ProtectedRoute';
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -27,7 +27,7 @@ export const FormSelect = forwardRef<HTMLSelectElement, FormSelectProps>(
             'w-full px-3 py-2 bg-bg-tertiary border rounded-lg text-text-primary',
             'focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent',
             error ? 'border-danger' : 'border-border hover:border-border-hover',
-            className
+            className,
           )}
           {...props}
         >
@@ -38,15 +38,11 @@ export const FormSelect = forwardRef<HTMLSelectElement, FormSelectProps>(
             </option>
           ))}
         </select>
-        {hint && !error && (
-          <p className="text-xs text-text-tertiary">{hint}</p>
-        )}
-        {error && (
-          <p className="text-xs text-danger">{error}</p>
-        )}
+        {hint && !error && <p className="text-xs text-text-tertiary">{hint}</p>}
+        {error && <p className="text-xs text-danger">{error}</p>}
       </div>
     );
-  }
+  },
 );
 
 FormSelect.displayName = 'FormSelect';

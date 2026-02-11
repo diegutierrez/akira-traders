@@ -8,7 +8,7 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-bg-primary text-text-primary font-sans;
   }

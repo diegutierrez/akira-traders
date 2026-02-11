@@ -1,7 +1,13 @@
 import { z } from 'zod';
 
 export const riskProfileSchema = z.enum(['conservative', 'moderate', 'aggressive']);
-export const tradingStyleSchema = z.enum(['scalping', 'swing', 'trend-following', 'arbitrage', 'mixed']);
+export const tradingStyleSchema = z.enum([
+  'scalping',
+  'swing',
+  'trend-following',
+  'arbitrage',
+  'mixed',
+]);
 export const copyModeSchema = z.enum(['fixed', 'ratio']);
 
 export const selectionCriteriaSchema = z.object({
@@ -25,7 +31,10 @@ export const traderMetricsSchema = z.object({
 
 export const traderCandidateSchema = z.object({
   display_name: z.string().min(1, 'Nombre requerido'),
-  binance_profile_url: z.string().url('URL inválida').regex(/binance\.com/, 'Debe ser URL de Binance'),
+  binance_profile_url: z
+    .string()
+    .url('URL inválida')
+    .regex(/binance\.com/, 'Debe ser URL de Binance'),
   metrics: traderMetricsSchema,
   style: tradingStyleSchema,
   assets_whitelist: z.array(z.string()).optional(),

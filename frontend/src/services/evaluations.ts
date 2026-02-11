@@ -113,7 +113,7 @@ export type RiskProfile = 'conservative' | 'moderate' | 'aggressive';
 export async function findOrCreateTrader(
   displayName: string,
   binanceUrl?: string,
-  style?: string
+  style?: string,
 ): Promise<string> {
   const { data, error } = await supabase.rpc('find_or_create_trader', {
     p_display_name: displayName,
@@ -191,11 +191,7 @@ export async function getAllEvaluations(): Promise<EvaluationSummary[]> {
  * Obtiene una evaluación por ID
  */
 export async function getEvaluationById(id: string): Promise<Evaluation | null> {
-  const { data, error } = await supabase
-    .from('evaluations')
-    .select('*')
-    .eq('id', id)
-    .single();
+  const { data, error } = await supabase.from('evaluations').select('*').eq('id', id).single();
 
   if (error) {
     console.error('Error fetching evaluation:', error);
@@ -239,11 +235,13 @@ export async function createEvaluation(params: {
   const traderId = await findOrCreateTrader(
     params.traderName,
     params.binanceUrl,
-    params.tradingStyle
+    params.tradingStyle,
   );
 
   // Obtener el usuario actual
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) {
     throw new Error('Usuario no autenticado');
   }
@@ -284,7 +282,7 @@ export async function updateEvaluation(
     copy_settings: CopySettings;
     decision: 'approved' | 'rejected' | 'watchlist';
     notes: string;
-  }>
+  }>,
 ): Promise<Evaluation> {
   const { data, error } = await supabase
     .from('evaluations')
@@ -305,10 +303,7 @@ export async function updateEvaluation(
  * Elimina una evaluación
  */
 export async function deleteEvaluation(id: string): Promise<void> {
-  const { error } = await supabase
-    .from('evaluations')
-    .delete()
-    .eq('id', id);
+  const { error } = await supabase.from('evaluations').delete().eq('id', id);
 
   if (error) {
     console.error('Error deleting evaluation:', error);
@@ -321,7 +316,7 @@ export async function deleteEvaluation(id: string): Promise<void> {
  */
 export async function calculateScore(
   metrics: EvaluationMetrics,
-  criteria: SelectionCriteria
+  criteria: SelectionCriteria,
 ): Promise<number> {
   const { data, error } = await supabase.rpc('calculate_evaluation_score', {
     p_metrics: metrics,

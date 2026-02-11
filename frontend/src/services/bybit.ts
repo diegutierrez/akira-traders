@@ -27,9 +27,7 @@ export interface BybitTrader {
 /**
  * Obtiene traders del leaderboard de Bybit
  */
-export async function fetchBybitTraders(
-  limit: number = 20
-): Promise<BybitTrader[]> {
+export async function fetchBybitTraders(limit: number = 20): Promise<BybitTrader[]> {
   const response = await fetch(`${EDGE_FUNCTION_URL}?limit=${limit}`);
 
   const data = await response.json();
@@ -45,7 +43,7 @@ export async function fetchBybitTraders(
  * Sincroniza traders de Bybit con Supabase
  */
 export async function syncBybitTraders(
-  limit: number = 20
+  limit: number = 20,
 ): Promise<{ created: number; updated: number; traders: BybitTrader[] }> {
   const bybitTraders = await fetchBybitTraders(limit);
 
@@ -88,17 +86,15 @@ export async function syncBybitTraders(
         .eq('binance_uid', trader.platform_uid);
       updated++;
     } else {
-      await supabase
-        .from('traders')
-        .insert({
-          display_name: trader.display_name,
-          binance_uid: trader.platform_uid,
-          binance_profile_url: trader.profile_url,
-          latest_metrics: metricsToSave,
-          metrics_updated_at: now,
-          trading_style: 'mixed',
-          is_active: true,
-        });
+      await supabase.from('traders').insert({
+        display_name: trader.display_name,
+        binance_uid: trader.platform_uid,
+        binance_profile_url: trader.profile_url,
+        latest_metrics: metricsToSave,
+        metrics_updated_at: now,
+        trading_style: 'mixed',
+        is_active: true,
+      });
       created++;
     }
   }
